@@ -1,0 +1,35 @@
+// placeholder
+%fd-center {
+    margin: 0 auto;
+    max-width: 1200px;
+} // mixin
+@mixin center($siteWidth: 1200px, $spacing: 0 auto) {
+    margin: $spacing;
+    max-width: $siteWidth;
+}
+
+.product-filter {
+    background: #fff;
+    &__inner {
+        max-width: 980px;
+        //@include center();
+    }
+    &__search-pane {
+        flex-basis: 30%;
+    }
+    &__search-results {
+        flex-basis: 70%;
+    }
+
+    &__btn {
+        @extend %fd-primary-btn;
+        background: red;
+        color: white;
+    }
+}
+
+.product-filter__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    max-width: 980px;
+}
