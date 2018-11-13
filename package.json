@@ -1,0 +1,23 @@
+{
+  "name": "sitecore-helix-for-frontend",
+  "version": "1.0.0",
+  "description": "example of a front-end application for sitecore helix projects",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phoen1x84/sitecore-helix-for-frontend.git"
+  },
+  "keywords": [
+    "sitecore-helix",
+    "sitecore-frontend"
+  ],
+  "author": "Matthew Neil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Phoen1x84/sitecore-helix-for-frontend/issues"
+  },
+  "homepage": "https://github.com/Phoen1x84/sitecore-helix-for-frontend#readme"
+}
