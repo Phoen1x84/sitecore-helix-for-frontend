@@ -1,6 +1,8 @@
-// Foundations
-@import './foundation/_breakpoints';
-@import './foundation/placeholders/_buttons';
+// Foundation dependency files
+@import 'normalize';
+
+// Foundation
+@import './foundation/*';
 
 // Features
-@import './feature/product-filter/_index';
+@import './feature/**/_index.scss';

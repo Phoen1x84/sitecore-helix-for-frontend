@@ -46,7 +46,7 @@ let paths = {
         filename: 'app.js'
     },
     styles: {
-        src: `${project}/src/app/main.scss`,
+        src: `${project}/src/app/app.scss`,
         dist: `${project}/dist/${projectName}`,
         filename: 'app.css'
     },
@@ -141,7 +141,7 @@ function watch() {
 };
 
 // Tasks
-const build = gulp.series(clean, test, jslint, gulp.parallel(scripts, styles, images), copyFiles);
+const build = gulp.series(clean, jslint, gulp.parallel(scripts, styles, images), copyFiles);
 /*
  * default task that can be running `gulp` from cli
  */

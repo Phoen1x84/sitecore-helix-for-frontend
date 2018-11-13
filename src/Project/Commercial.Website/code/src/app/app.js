@@ -1,3 +1,5 @@
 import ProductFilter from './feature/product-filter/';
 
-ProductFilter.init();
+document.addEventListener('DOMContentLoaded', () => {
+    ProductFilter.init();
+});

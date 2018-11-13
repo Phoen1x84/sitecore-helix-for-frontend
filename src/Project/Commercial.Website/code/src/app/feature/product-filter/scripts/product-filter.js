@@ -1,10 +1,10 @@
-import ProductFilter from './../../../../../../../Feature/product/src/scripts/ProductFilter.js';
+import ProductFilter from './../../../../../../../../Feature/products/src/scripts/ProductFilter.js';
 
 const ProductFilterInterface = (() => {       
 
     const _makeRequest = function() {
         const resultList = ProductFilter.getResults('//api-url', {
-            method: "GET"
+            method: 'GET'
         });
 
         return resultList;
