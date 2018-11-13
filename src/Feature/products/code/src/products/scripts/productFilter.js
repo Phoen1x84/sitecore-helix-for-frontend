@@ -7,11 +7,11 @@ const ProductFilter = (() => {
     };
 
     const filterOptions = () => {
-        
+        // some filtering code here
     };
 
     const deleteResults = () => {
-
+        // some code here
     };
 
     return {

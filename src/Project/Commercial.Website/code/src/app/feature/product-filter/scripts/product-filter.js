@@ -1,4 +1,4 @@
-import ProductFilter from './../../../../../../../../Feature/products/src/scripts/ProductFilter.js';
+import ProductFilter from './../../../../../../../../Feature/products/code/src/products/index.js';
 
 const ProductFilterInterface = (() => {       
 

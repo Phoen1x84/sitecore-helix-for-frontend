@@ -104,7 +104,7 @@ function scripts() {
     return bundle.bundle()
         .pipe(source(paths.scripts.filename))
         .pipe(buffer())
-        .pipe(uglify())
+        //.pipe(uglify()) // commented for demo
         .pipe(gulp.dest(paths.scripts.dist));
 };
 
@@ -141,7 +141,7 @@ function watch() {
 };
 
 // Tasks
-const build = gulp.series(clean, jslint, gulp.parallel(scripts, styles, images), copyFiles);
+const build = gulp.series(clean, test, jslint, gulp.parallel(scripts, styles, images), copyFiles);
 /*
  * default task that can be running `gulp` from cli
  */
