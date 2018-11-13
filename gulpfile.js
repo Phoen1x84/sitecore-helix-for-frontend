@@ -43,12 +43,12 @@ let paths = {
             `${project}/src/app/project/**/__tests__/*.js`
         ],
         dist: `${project}/dist/${projectName}`,
-        filename: 'main.js'
+        filename: 'app.js'
     },
     styles: {
         src: `${project}/src/app/main.scss`,
         dist: `${project}/dist/${projectName}`,
-        filename: 'main.css'
+        filename: 'app.css'
     },
     images: {
         src: [
