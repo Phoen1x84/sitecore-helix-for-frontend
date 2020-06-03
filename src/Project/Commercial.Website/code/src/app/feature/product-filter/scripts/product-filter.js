@@ -3,7 +3,7 @@ import ProductFilter from './../../../../../../../../Feature/products/code/src/p
 const ProductFilterInterface = (() => {       
 
     const _makeRequest = function() {
-        const resultList = ProductFilter.getResults('//api-url', {
+        const resultList = ProductFilter.getResults('//api-url/commercial', {
             method: 'GET'
         });
 

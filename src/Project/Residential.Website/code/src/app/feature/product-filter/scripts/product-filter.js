@@ -3,7 +3,7 @@ import ProductFilter from './../../../../../../../../Feature/products/code/src/p
 const ProductFilterInterface = (() => {       
 
     const _makeRequest = function() {
-        const resultList = ProductFilter.getResults('//api-url', {
+        const resultList = ProductFilter.getResults('//api-url/residential', {
             method: 'GET'
         });
 
@@ -14,6 +14,10 @@ const ProductFilterInterface = (() => {
         // for each item in results add animation class or inline class
     };
 
+    const toggleResultView = (el, cssClass) => {
+        return el.classList.toggleClass(cssClass);
+    };
+
     const _loadResults = function() {
         _makeRequest().then((data) => {
             _animateResults(...data);
@@ -21,10 +25,13 @@ const ProductFilterInterface = (() => {
     };
 
     const init = function() {
-        _makeRequest();
+        _loadResults();
     };
 
-    return init;    
+    return {
+        init: init,
+        toggleResultView: toggleResultView
+    };    
 
 })();
 
