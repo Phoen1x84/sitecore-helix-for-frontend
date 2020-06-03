@@ -19,11 +19,11 @@ const argv = require('yargs').argv;
 
 sass.compiler = require('node-sass');
 
-let projectName = 'Commercial.Website';
+let projectName = argv.project || 'Commercial';
 
 let foundation = './src/foundation/**/code';
 let feature = './src/feature/**/code';
-let project = `./src/project/${projectName}/code`;
+let project = `./src/project/${projectName}.Website/code`;
 
 let wwwroot = argv.wwwroot || 'C:/inetpub/wwwroot/SugukDemo/website';
 
@@ -77,10 +77,10 @@ function styles() {
         .pipe(sass({
             includePaths: require('node-normalize-scss').includePaths
         }).on('error', sass.logError))
-        .pipe(cssnano())
-        .pipe(autoprefixer({
-            cascade: false
-        }))
+        // .pipe(cssnano())
+        // .pipe(autoprefixer({
+        //     cascade: false
+        // }))
         .pipe(gulp.dest(paths.styles.dist));
 };
 
