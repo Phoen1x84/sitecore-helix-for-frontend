@@ -1,8 +1,8 @@
-import ProductFilter from './../../../../../../../../Feature/products/code/src/products/index.js';
+import { ProductFilter } from '../../../../../Feature/products/index';
 
-const ProductFilterInterface = (() => {       
+export const ProductFilterInterface = (() => {
 
-    const _makeRequest = function() {
+    const _makeRequest = function () {
         const resultList = ProductFilter.getResults('//api-url/residential', {
             method: 'GET'
         });
@@ -18,21 +18,19 @@ const ProductFilterInterface = (() => {
         return el.classList.toggleClass(cssClass);
     };
 
-    const _loadResults = function() {
+    const _loadResults = function () {
         _makeRequest().then((data) => {
             _animateResults(...data);
         });
     };
 
-    const init = function() {
+    const init = function () {
         _loadResults();
     };
 
     return {
         init: init,
         toggleResultView: toggleResultView
-    };    
+    };
 
 })();
-
-export default ProductFilterInterface;

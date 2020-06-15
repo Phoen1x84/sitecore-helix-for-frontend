@@ -1,4 +1,4 @@
-import ProductFilter from './../scripts/productFilter';
+import { ProductFilter } from '../productFilter';
 
 describe('Product filter', () => {
     it('should have public functions', () => {

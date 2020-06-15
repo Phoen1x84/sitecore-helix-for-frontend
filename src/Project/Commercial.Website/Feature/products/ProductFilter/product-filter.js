@@ -1,8 +1,8 @@
-import ProductFilter from './../../../../../../../../Feature/products/code/src/products/index.js';
+import { ProductFilter } from '../../../../../Feature/products/index';
 
-const ProductFilterInterface = (() => {       
+export const ProductFilterInterface = (() => {
 
-    const _makeRequest = function() {
+    const _makeRequest = function () {
         const resultList = ProductFilter.getResults('//api-url/commercial', {
             method: 'GET'
         });
@@ -14,18 +14,16 @@ const ProductFilterInterface = (() => {
         // for each item in results add animation class or inline class
     };
 
-    const _loadResults = function() {
+    const _loadResults = function () {
         _makeRequest().then((data) => {
             _spinnyAnimationResults(...data);
         });
     };
 
-    const init = function() {
-        _loadResults();        
+    const init = function () {
+        _loadResults();
     };
 
-    return init;    
+    return init;
 
 })();
-
-export default ProductFilterInterface;

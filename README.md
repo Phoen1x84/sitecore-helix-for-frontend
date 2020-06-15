@@ -21,60 +21,44 @@ These instructions will get you a copy of the project up and running on your loc
 src
     Feature
         products
-            code
-                src
-                    products
-                        __tests__
-                            // tests here
-                        scripts
-                            // scripts here
-                        index.js
+            index.js
             Views
+                ProductFeature
+                    ProductFeature.cshtml
+                    productFeature.js
+                    __tests__
+                        // tests here
     Foundation
         // nothing in here yet
     Project
         Commercial.Website
-            code
-                dist
-                src
-                    app
-                        feature
-                            products
-                                __mocks__
-                                    // mocks here
-                                __tests__
-                                    // tests here
-                                scripts
-                                    // scripts here
-                                styles
-                                    // scss partials here
-                                index.js
-                                index.scss
-                        foundation
-                            // foundation files here such as breakpoints, variables, placeholders etc...
-                        app.js
-                        app.scss
+            dist
+            Feature
+                products
+                    ProductFeature
+                        productFeature.js
+                        _product-feature.scss
+                        __tests__
+                            // mocks here
+                            // tests here
+            Foundation
+                // foundation files here such as breakpoints, variables, placeholders etc...
+            index.js
+            index.scss
         Residential.Website
-            code
-                dist
-                src
-                    app
-                        feature
-                            products
-                                __mocks__
-                                    // mocks here
-                                __tests__
-                                    // tests here
-                                scripts
-                                    // scripts here
-                                styles
-                                    // scss partials here
-                                index.js
-                                index.scss
-                        foundation
-                            // foundation files here such as breakpoints, variables, placeholders etc...
-                        app.js
-                        app.scss
+            dist
+            Feature
+                products
+                    ProductFeature
+                        productFeature.js
+                        _product-feature.scss
+                        __tests__
+                            // mocks here
+                            // tests here
+            Foundation
+                // foundation files here such as breakpoints, variables, placeholders etc...
+            index.js
+            index.scss
 
 ```
 

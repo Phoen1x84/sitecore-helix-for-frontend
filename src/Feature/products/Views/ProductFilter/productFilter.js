@@ -1,4 +1,4 @@
-const ProductFilter = (() => {
+export const ProductFilter = (() => {
 
     const getResults = (url, obj) => {
         return fetch(url, obj)
@@ -21,5 +21,3 @@ const ProductFilter = (() => {
     };
 
 })();
-
-export default ProductFilter;

@@ -1,11 +1,9 @@
 const autoprefixer = require('gulp-autoprefixer');
 const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
-const concat = require('gulp-concat');
 const cssnano = require('gulp-cssnano');
 const del = require('del');
 const eslint = require('gulp-eslint');
-const foreach = require('gulp-foreach');
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const jest = require('gulp-jest').default;
@@ -21,48 +19,48 @@ sass.compiler = require('node-sass');
 
 let projectName = argv.project || 'Commercial';
 
-let foundation = './src/foundation/**/code';
-let feature = './src/feature/**/code';
-let project = `./src/project/${projectName}.Website/code`;
+let foundation = './src/Foundation/**';
+let feature = './src/Feature/**';
+let project = `./src/Project/${projectName}.Website`;
 
 let wwwroot = argv.wwwroot || 'C:/inetpub/wwwroot/SugukDemo/website';
 
 let paths = {
     wwwroot: wwwroot,
-    copyDirectory: [`${project}/dist/**/*.*`],
+    copyDirectory: [`./dist/**/*.*`],
     scripts: {
         src: [
-            `${feature}/src/**/scripts/*.js`,
-            `${project}/src/app/feature/**/scripts/*.js`,
-            `${project}/src/app/project/**/scripts/*.js`,
-            `${project}/src/app/*.js`
+            `${feature}/**/*.js`,
+            `${project}/Feature/**/*.js`,
+            `${project}/Foudation/**/*.js`,
+            `${project}/*.js`
         ],
         tests: [
-            `${feature}/src/**/__tests__/*.js`,
-            `${project}/src/app/feature/**/__tests__/*.js`,
-            `${project}/src/app/project/**/__tests__/*.js`
+            `${feature}/**/__tests__/*.js`,
+            `${project}/Feature/**/__tests__/*.js`,
+            `${project}/Foundation/**/__tests__/*.js`
         ],
-        dist: `${project}/dist/${projectName}`,
-        filename: 'app.js'
+        dist: `./dist/${projectName}`,
+        filename: 'index.js'
     },
     styles: {
-        src: `${project}/src/app/app.scss`,
-        dist: `${project}/dist/${projectName}`,
-        filename: 'app.css'
+        src: `${project}/index.scss`,
+        dist: `./dist/${projectName}`,
+        filename: 'index.css'
     },
     images: {
         src: [
-            `${project}/src/app/assets/**/*`,
-            `${project}/src/app/feature/**/images/*`,
-            `${project}/src/app/project/**/images/*`
+            `${project}/assets/**/*`,
+            `${project}/feature/**/images/*`,
+            `${project}/project/**/images/*`
         ],
-        dist: `${project}/dist/images`
+        dist: `./dist/images`
     }
 };
 
 function clean() {
     console.log('\x1b[33m%s\x1b[0m', 'Deleting dist directory');
-    return del([`${project}/dist/`]);
+    return del([`./dist/${project}/`]);
 };
 
 function styles() {
@@ -98,7 +96,7 @@ function jslint() {
 function scripts() {
     console.log('\x1b[33m%s\x1b[0m', 'Compiling JavaScript files');
     var bundle = browserify({
-        entries: `${project}/src/app/${paths.scripts.filename}`,
+        entries: `${project}/${paths.scripts.filename}`,
         debug: true
     }).transform('babelify');
     return bundle.bundle()
@@ -121,13 +119,13 @@ function images() {
         .pipe(imagemin({
             verbose: true
         }, [
-                imagemin.svgo({
-                    plugins: [
-                        { removeViewBox: true },
-                        { cleanupIDs: false }
-                    ]
-                })
-            ]))
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
         .pipe(rename({
             dirname: '' // renames folder path to keep the file structure flat
         }))
@@ -136,8 +134,8 @@ function images() {
 
 function watch() {
     // will need to support multi-site    
-    gulp.watch(`${project}/src/app/**/*.js`, gulp.series(test, jslint, scripts, copyFiles));
-    gulp.watch(`${project}/src/app/**/*.scss`, gulp.series(styles, copyFiles));
+    gulp.watch(`${project}/**/*.js`, gulp.series(test, jslint, scripts, copyFiles));
+    gulp.watch(`${project}/**/*.scss`, gulp.series(styles, copyFiles));
 };
 
 // Tasks
