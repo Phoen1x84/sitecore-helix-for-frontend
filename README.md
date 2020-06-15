@@ -14,10 +14,11 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone this repository to your local machine, this can be any directory.
 2. Create a folder in your inetpub directory C:\inetpub\wwwroot\SugukDemo
 3. CD to the root directory and run ```npm install```
-4. Run ```gulp build``` in command line and this will compile the frontend application and push them to the inetpub directory
+4. Run `gulp build` or `gulp build project=ProjectName` in command line and this will compile the frontend assets and push them to the inetpub directory
 
 ## Folder structure
 ```text
+dist
 src
     Feature
         products
@@ -32,11 +33,10 @@ src
         // nothing in here yet
     Project
         Commercial.Website
-            dist
             Feature
                 products
                     ProductFeature
-                        productFeature.js
+                        product-feature.js
                         _product-feature.scss
                         __tests__
                             // mocks here
@@ -46,11 +46,10 @@ src
             index.js
             index.scss
         Residential.Website
-            dist
             Feature
                 products
                     ProductFeature
-                        productFeature.js
+                        product-feature.js
                         _product-feature.scss
                         __tests__
                             // mocks here
@@ -72,3 +71,4 @@ src
 ## Authors
 
 * **Matthew Neil** - *Initial work* - [Pheon1x84](https://github.com/Phoen1x84)
+* **Pete Davis** - [petedavisdev](https://github.com/petedavisdev) Twitter: [@petedavisdev](https://twitter.com/petedavisdev)
