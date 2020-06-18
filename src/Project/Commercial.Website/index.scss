@@ -1,8 +1,5 @@
-// Foundation dependency files
-@import 'normalize';
-
 // Foundation
-@import './foundation/*';
+@import './foundation/**/_*.scss';
 
 // Features
-@import './feature/**/*';
+@import './feature/**/_*.scss';
