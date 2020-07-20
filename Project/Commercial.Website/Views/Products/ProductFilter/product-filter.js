@@ -1,4 +1,4 @@
-import { ProductFilter } from '../../../../../Feature/products/index';
+import { ProductFilter } from '../../../../../Feature/Products/index';
 
 export const ProductFilterInterface = (() => {
 
