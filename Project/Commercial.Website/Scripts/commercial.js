@@ -1,5 +1,4 @@
-import './index.scss';
-import { ProductFilterInterface } from '../Views/Products/ProductFilter/product-filter.js';
+import { ProductFilter } from '../Views/Products/ProductFilter/product-filter';
 
 document.addEventListener('DOMContentLoaded', () => {
     ProductFilter.init();

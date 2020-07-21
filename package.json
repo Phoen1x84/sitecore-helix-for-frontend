@@ -9,6 +9,13 @@
     ]
   },
   "scripts": {
+    "build": "lerna bootstrap --hoist && lerna run build",
+    "dev": "lerna run dev --parallel | npm run autopublish | npm run serve",
+    "autopublish": "onchange \"dist/**/*.*\" -- npm run publish",
+    "serve": "browser-sync start --files \"C:/inetpub/wwwroot/thercn.sc/dist/\" \"C:/inetpub/wwwroot/thercn.sc/Views/\" --proxy \"https://local.rcn.org.uk\"",
+    "publish": "copyfiles dist/**/*.* C:/inetpub/wwwroot/thercn.sc",
+    "lintSCSS": "stylelint \"./**/*.scss\" --fix",
+    "lintTS": "eslint \"./**/*.ts\" --config \"../.eslintrc.js\" --fix",
     "test": "jest"
   },
   "jest": {
@@ -22,58 +29,6 @@
       "js",
       "json"
     ]
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "IE 10"
-  ],
-  "sasslintConfig": "./sasslint.config.json",
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "rules": {
-      "eqeqeq": "off",
-      "semi": [
-        "error",
-        "always"
-      ],
-      "quotes": [
-        "error",
-        "single",
-        {
-          "avoidEscape": true
-        }
-      ],
-      "one-var": [
-        "error",
-        "never"
-      ],
-      "strict": [
-        "error",
-        "safe"
-      ],
-      "camelcase": "error",
-      "max-depth": [
-        "error",
-        4
-      ]
-    },
-    "globals": {
-      "window": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "allowImportExportEverywhere": true,
-      "ecmaFeatures": {
-        "jsx": true,
-        "modules": true
-      }
-    },
-    "env": {
-      "es6": true,
-      "browser": true
-    }
   },
   "repository": {
     "type": "git",
@@ -89,8 +44,13 @@
     "url": "https://github.com/Phoen1x84/sitecore-helix-for-frontend/issues"
   },
   "homepage": "https://github.com/Phoen1x84/sitecore-helix-for-frontend#readme",
-  "dependencies": {},
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "browser-sync": "^2.26.10",
+    "copyfiles": "^2.3.0",
+    "eslint": "^7.5.0",
+    "jest": "^26.1.0",
+    "lerna": "^3.22.1",
+    "onchange": "^7.0.2",
+    "stylelint": "^13.6.1"
   }
 }
