@@ -7,7 +7,7 @@
     "build": "npm run styles | npm run scripts",
     "dev": "npm run styles:dev | npm run scripts:dev",
     "start": "npm run build && npm run dev",
-    "scripts": "rollup \"./Scripts/residential.js\" --file \"../../../dist/residential.js\" --format umd --name \"residential\"",
+    "scripts": "rollup -c",
     "scripts:dev": "onchange \"./Scripts/**/*.js\" \"./Views/**/*.js\" -- npm run scripts",
     "styles": "node-sass --importer ../../node_modules/node-sass-glob-importer/dist/cli.js -o ../../dist/ ./Styles/residential.scss",
     "styles:dev": "onchange \"./Styles/**/*.scss\" \"./Views/**/*.scss\" -- npm run styles"

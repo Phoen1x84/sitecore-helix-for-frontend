@@ -19,45 +19,56 @@ These instructions will get you a copy of the project up and running on your loc
 ## Folder structure
 ```text
 dist
-src
-    Feature
-        products
-            index.js
-            Views
-                ProductFeature
-                    ProductFeature.cshtml
-                    productFeature.js
+Feature
+    Products
+        Scripts
+            products.js
+        Views
+            ProductComponent
+                ProductComponent.cshtml
+                productComponent.js
+                __tests__
+                    // tests here
+Foundation
+    // nothing in here yet
+Project
+    Commercial.Website
+        Scripts
+            commercial.js
+            // helper/service modules here...
+        Styles
+            commercial.scss
+            // base styles here such as _breakpoints, _variables, _placeholders etc...
+        Views
+            products
+                ProductComponent
+                    product-component.js
+                    _product-component.scss
                     __tests__
+                        // mocks here
                         // tests here
-    Foundation
-        // nothing in here yet
-    Project
-        Commercial.Website
-            Feature
-                products
-                    ProductFeature
-                        product-feature.js
-                        _product-feature.scss
-                        __tests__
-                            // mocks here
-                            // tests here
-            Foundation
-                // foundation files here such as breakpoints, variables, placeholders etc...
-            index.js
-            index.scss
-        Residential.Website
-            Feature
-                products
-                    ProductFeature
-                        product-feature.js
-                        _product-feature.scss
-                        __tests__
-                            // mocks here
-                            // tests here
-            Foundation
-                // foundation files here such as breakpoints, variables, placeholders etc...
-            index.js
-            index.scss
+                UniqueComponent
+                    UniqueComponent.cshtml
+                    unique-component.js
+                    __unique-component.scss
+                    __tests__
+                        // mocks here
+                        // tests here
+    Residential.Website
+        Scripts
+            commercial.js
+            // helper/service modules here...
+        Styles
+            commercial.scss
+            // base styles here such as _breakpoints, _variables, _placeholders etc...
+        Views
+            products
+                ProductComponent
+                    product-component.js
+                    _product-component.scss
+                    __tests__
+                        // mocks here
+                        // tests here
 
 ```
 

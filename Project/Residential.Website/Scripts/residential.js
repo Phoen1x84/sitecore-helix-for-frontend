@@ -1,5 +1,5 @@
-import { ProductFilter } from '../Views/Products/ProductFilter/product-filter.js';
+import { ProductFilterInterface } from '../Views/Products/ProductFilter/product-filter.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    ProductFilter.init();
+    ProductFilterInterface.init();
 });

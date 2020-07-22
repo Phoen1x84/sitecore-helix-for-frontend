@@ -15,7 +15,8 @@
     "serve": "browser-sync start --files \"C:/inetpub/wwwroot/thercn.sc/dist/\" \"C:/inetpub/wwwroot/thercn.sc/Views/\" --proxy \"https://local.rcn.org.uk\"",
     "publish": "copyfiles dist/**/*.* C:/inetpub/wwwroot/thercn.sc",
     "lintSCSS": "stylelint \"./**/*.scss\" --fix",
-    "lintTS": "eslint \"./**/*.ts\" --config \"../.eslintrc.js\" --fix",
+    "lintJS": "eslint \"./**/*.js\" --config \"../.eslintrc.js\" --fix",
+    "lint": "npm run lintSCSS && npm run lintJS",
     "test": "jest"
   },
   "jest": {

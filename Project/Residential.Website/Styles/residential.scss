@@ -1,8 +1,5 @@
-// Foundation dependency files
-@import 'normalize';
+@import '_breakpoints.scss';
+@import '_buttons.scss';
+@import '_base.scss';
 
-// Foundation
-@import './foundation/*';
-
-// Features
-@import './feature/**/*';
+@import '../Views/**/*.scss';

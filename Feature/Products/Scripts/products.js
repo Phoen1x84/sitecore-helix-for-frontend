@@ -1,2 +1,2 @@
-import { ProductFilter } from './Views/ProductFilter/productFilter.js';
+import { ProductFilter } from '../Views/ProductFilter/productFilter.js';
 export { ProductFilter };
