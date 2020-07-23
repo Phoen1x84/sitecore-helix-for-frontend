@@ -14,7 +14,8 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone this repository to your local machine, this can be any directory.
 2. Create a folder in your inetpub directory C:\inetpub\wwwroot\SugukDemo
 3. CD to the root directory and run ```npm install```
-4. Run `gulp build` or `gulp build project=ProjectName` in command line and this will compile the frontend assets and push them to the inetpub directory
+4. Run `npm run build` in command line and this install project dependencies, compile the frontend assets in the **dist** directory
+5. Run `npm run publish` to copy the compiled files to the inetpub directory
 
 ## Folder structure
 ```text
@@ -40,17 +41,18 @@ Project
             commercial.scss
             // base styles here such as _breakpoints, _variables, _placeholders etc...
         Views
-            products
+            Products
                 ProductComponent
                     product-component.js
                     _product-component.scss
                     __tests__
                         // mocks here
                         // tests here
-                UniqueComponent
-                    UniqueComponent.cshtml
-                    unique-component.js
-                    __unique-component.scss
+            Widgets
+                CommercialWidget
+                    CommercialWidget.cshtml
+                    commercial-widget.js
+                    _commercial-widget.scss
                     __tests__
                         // mocks here
                         // tests here
@@ -62,7 +64,7 @@ Project
             commercial.scss
             // base styles here such as _breakpoints, _variables, _placeholders etc...
         Views
-            products
+            Products
                 ProductComponent
                     product-component.js
                     _product-component.scss
@@ -73,11 +75,10 @@ Project
 ```
 
 ## Built With
-* [sass](http://sass-lang.com/) - The preprocessor used
-* [gulp](http://gulpjs.com/) - Used to generate the Front-End assets
-* [NPM](https://www.npmjs.com/) - Dependency Management
-* [Babel](http://babeljs.io) - ES6 Transpiler
-* [Browserify](http://browserify.org/) - Bundling dependencies
+* [NPM](https://www.npmjs.com/) - Dependency management and build scripts
+* [Lerna](https://lerna.js.org/) - Multi-package dependency manager and script runner
+* [Rollup](https://rollupjs.org/) - JS bundler
+* [sass](http://sass-lang.com/) - CSS preprocessor
 
 ## Authors
 

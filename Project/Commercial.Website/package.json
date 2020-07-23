@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": ">2%",
   "scripts": {
     "build": "npm run styles | npm run scripts",
     "dev": "npm run styles:dev | npm run scripts:dev",
@@ -16,9 +22,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.10.4",
     "node-sass": "^4.14.1",
     "node-sass-glob-importer": "^5.3.2",
     "onchange": "^7.0.2",
-    "rollup": "^2.21.0"
+    "rollup": "^2.21.0",
+    "@rollup/plugin-babel": "^5.1.0"
   }
 }
