@@ -33,6 +33,7 @@ $breakpoints: (
     @if $column <= $column-count {
         width: percentage($column / $column-count);
     }
+
     @else {
         @warn 'Sorry the column number is greater than #{$column-count}';
     }

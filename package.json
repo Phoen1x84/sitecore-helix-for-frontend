@@ -14,9 +14,9 @@
     "autopublish": "onchange \"dist/**/*.*\" -- npm run publish",
     "serve": "browser-sync start --files \"C:/inetpub/wwwroot/SitecoreHelixFrontend/dist/\" \"C:/inetpub/wwwroot/SitecoreHelixFrontend/Views/\" --proxy \"https://local.website.org.uk\"",
     "publish": "copyfiles dist/**/*.* C:/inetpub/wwwroot/SitecoreHelixFrontend",
-    "lintSCSS": "stylelint \"./**/*.scss\" --fix",
-    "lintJS": "eslint \"./**/*.js\" --config \"../.eslintrc.js\" --fix",
-    "lint": "npm run lintSCSS && npm run lintJS",
+    "lintSCSS": "stylelint Project//**/*.scss --fix",
+    "lintJS": "eslint Feature/**/*.js Project/**/*.js --fix",
+    "lint": "npm run lintSCSS | npm run lintJS",
     "test": "jest"
   },
   "jest": {

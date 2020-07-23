@@ -1,11 +1,14 @@
 .product-filter {
     background: #fff;
-    &__inner {        
+
+    &__inner {
         display: flex;
     }
+
     &__search-pane {
         flex-basis: 30%;
     }
+
     &__search-results {
         flex-basis: 70%;
     }
