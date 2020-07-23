@@ -64,3 +64,6 @@ typings/
 [dD]ist
 [oO]bj
 [pP]ublic
+
+# build cache
+.cache

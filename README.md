@@ -14,59 +14,71 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone this repository to your local machine, this can be any directory.
 2. Create a folder in your inetpub directory C:\inetpub\wwwroot\SugukDemo
 3. CD to the root directory and run ```npm install```
-4. Run `gulp build` or `gulp build project=ProjectName` in command line and this will compile the frontend assets and push them to the inetpub directory
+4. Run `npm run build` in command line and this install project dependencies, compile the frontend assets in the **dist** directory
+5. Run `npm run publish` to copy the compiled files to the inetpub directory
 
 ## Folder structure
 ```text
 dist
-src
-    Feature
-        products
-            index.js
-            Views
-                ProductFeature
-                    ProductFeature.cshtml
-                    productFeature.js
+Feature
+    Products
+        Scripts
+            products.js
+        Views
+            ProductComponent
+                ProductComponent.cshtml
+                productComponent.js
+                __tests__
+                    // tests here
+Foundation
+    // nothing in here yet
+Project
+    Commercial.Website
+        Scripts
+            commercial.js
+            // helper/service modules here...
+        Styles
+            commercial.scss
+            // base styles here such as _breakpoints, _variables, _placeholders etc...
+        Views
+            Products
+                ProductComponent
+                    product-component.js
+                    _product-component.scss
                     __tests__
+                        // mocks here
                         // tests here
-    Foundation
-        // nothing in here yet
-    Project
-        Commercial.Website
-            Feature
-                products
-                    ProductFeature
-                        product-feature.js
-                        _product-feature.scss
-                        __tests__
-                            // mocks here
-                            // tests here
-            Foundation
-                // foundation files here such as breakpoints, variables, placeholders etc...
-            index.js
-            index.scss
-        Residential.Website
-            Feature
-                products
-                    ProductFeature
-                        product-feature.js
-                        _product-feature.scss
-                        __tests__
-                            // mocks here
-                            // tests here
-            Foundation
-                // foundation files here such as breakpoints, variables, placeholders etc...
-            index.js
-            index.scss
+            Widgets
+                CommercialWidget
+                    CommercialWidget.cshtml
+                    commercial-widget.js
+                    _commercial-widget.scss
+                    __tests__
+                        // mocks here
+                        // tests here
+    Residential.Website
+        Scripts
+            commercial.js
+            // helper/service modules here...
+        Styles
+            commercial.scss
+            // base styles here such as _breakpoints, _variables, _placeholders etc...
+        Views
+            Products
+                ProductComponent
+                    product-component.js
+                    _product-component.scss
+                    __tests__
+                        // mocks here
+                        // tests here
 
 ```
 
 ## Built With
-* [sass](http://sass-lang.com/) - The preprocessor used
-* [gulp](http://gulpjs.com/) - Used to generate the Front-End assets
-* [NPM](https://www.npmjs.com/) - Dependency Management
-* [Babel](http://babeljs.io) - ES6 Transpiler
-* [Browserify](http://browserify.org/) - Bundling dependencies
+* [NPM](https://www.npmjs.com/) - Dependency management and build scripts
+* [Lerna](https://lerna.js.org/) - Multi-package dependency manager and script runner
+* [Rollup](https://rollupjs.org/) - JS bundler
+* [sass](http://sass-lang.com/) - CSS preprocessor
 
 ## Authors
 

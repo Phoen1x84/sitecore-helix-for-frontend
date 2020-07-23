@@ -1,0 +1,21 @@
+.product-filter {
+    background: #fff;
+
+    &__inner {
+        max-width: 980px;
+        //@include center();
+    }
+
+    &__search-pane {
+        flex-basis: 30%;
+    }
+
+    &__search-results {
+        flex-basis: 70%;
+    }
+
+    &__btn {
+        background: green;
+        color: white;
+    }
+}
