@@ -1,4 +1,4 @@
-import { ProductFilter } from '../../../../../Feature/Products/Scripts/products';
+import { ProductFilter } from '@sitecore-fe/products';
 
 export const ProductFilterInterface = (() => {
 

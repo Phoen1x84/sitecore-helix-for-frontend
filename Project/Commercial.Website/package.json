@@ -1,5 +1,5 @@
 {
-  "name": "Commercial.Website",
+  "name": "@sitecore-fe/commercial",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -23,10 +23,14 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
     "node-sass": "^4.14.1",
     "node-sass-glob-importer": "^5.3.2",
     "onchange": "^7.0.2",
-    "rollup": "^2.21.0",
-    "@rollup/plugin-babel": "^5.1.0"
+    "rollup": "^2.21.0"
+  },
+  "dependencies": {
+    "@sitecore-fe/products": "^1.0.0"
   }
 }

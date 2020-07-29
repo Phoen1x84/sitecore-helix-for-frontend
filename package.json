@@ -1,5 +1,5 @@
 {
-  "name": "sitecore-helix-for-frontend",
+  "name": "sitecore-fe",
   "version": "1.0.0",
   "description": "example of a front-end application for sitecore helix projects",
   "main": "gulpfile.js",
@@ -9,7 +9,7 @@
     ]
   },
   "scripts": {
-    "build": "lerna bootstrap --hoist && lerna run build",
+    "build": "lerna bootstrap --hoist && lerna run build --parallel",
     "dev": "lerna run dev --parallel | npm run autopublish | npm run serve",
     "autopublish": "onchange \"dist/**/*.*\" -- npm run publish",
     "serve": "browser-sync start --files \"C:/inetpub/wwwroot/SitecoreHelixFrontend/dist/\" \"C:/inetpub/wwwroot/SitecoreHelixFrontend/Views/\" --proxy \"https://local.website.org.uk\"",

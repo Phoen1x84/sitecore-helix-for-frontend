@@ -1,4 +1,5 @@
 ﻿import babel from '@rollup/plugin-babel';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default {
     input: 'Scripts/commercial.js',
@@ -6,5 +7,7 @@ export default {
         dir: '../../dist/',
         format: 'esm'
     },
-    plugins: [babel({ babelHelpers: 'bundled' })]
+    plugins: [
+        nodeResolve(),
+        babel({ babelHelpers: 'bundled' })]
 };
