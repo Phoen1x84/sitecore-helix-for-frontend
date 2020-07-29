@@ -13,11 +13,12 @@
     "dev": "lerna run dev --parallel | npm run autopublish | npm run serve",
     "autopublish": "onchange \"dist/**/*.*\" -- npm run publish",
     "serve": "browser-sync start --files \"C:/inetpub/wwwroot/SitecoreHelixFrontend/dist/\" \"C:/inetpub/wwwroot/SitecoreHelixFrontend/Views/\" --proxy \"https://local.website.org.uk\"",
-    "publish": "copyfiles dist/**/*.* C:/inetpub/wwwroot/SitecoreHelixFrontend",
+    "publish": "npm run deldist && copyfiles -f ./Project/**/dist/**/*.* C:/inetpub/wwwroot/SitecoreHelixFrontend/dist",
     "lintSCSS": "stylelint Project//**/*.scss --fix",
     "lintJS": "eslint Feature/**/*.js Project/**/*.js --fix",
     "lint": "npm run lintSCSS | npm run lintJS",
-    "test": "jest"
+    "test": "jest",
+    "deldist": "del-cli --force C:/inetpub/wwwroot/SitecoreHelixFrontend/dist/**/*.*"
   },
   "jest": {
     "verbose": true,
@@ -48,6 +49,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.10",
     "copyfiles": "^2.3.0",
+    "del-cli": "^3.0.1",
     "eslint": "^7.5.0",
     "jest": "^26.1.0",
     "lerna": "^3.22.1",

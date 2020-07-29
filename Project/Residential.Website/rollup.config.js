@@ -2,9 +2,9 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default {
-    input: 'Scripts/residential.js',
+    input: 'src/residential.js',
     output: {
-        dir: '../../dist/',
+        dir: './dist/',
         format: 'umd'
     },
     plugins: [

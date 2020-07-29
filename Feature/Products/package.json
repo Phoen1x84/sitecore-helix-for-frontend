@@ -1,12 +1,6 @@
 {
   "name": "@sitecore-fe/products",
   "version": "1.0.0",
-  "description": "",
-  "main": "Scripts/products.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "private": true,
+  "main": "products.js"
 }

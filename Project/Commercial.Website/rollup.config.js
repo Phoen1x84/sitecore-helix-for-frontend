@@ -2,9 +2,9 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default {
-    input: 'Scripts/commercial.js',
+    input: 'src/commercial.js',
     output: {
-        dir: '../../dist/',
+        dir: './dist/',
         format: 'esm'
     },
     plugins: [

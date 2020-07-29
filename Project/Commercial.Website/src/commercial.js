@@ -1,4 +1,4 @@
-import { ProductFilterInterface } from '../Views/Products/ProductFilter/product-filter.js';
+import { ProductFilterInterface } from './Products/ProductFilter/product-filter';
 
 document.addEventListener('DOMContentLoaded', () => {
     ProductFilterInterface.init();
