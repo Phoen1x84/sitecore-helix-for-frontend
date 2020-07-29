@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Project", "1. Project", "{56d5e9ef-ffec-45f5-8606-f6e8ddac251b}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Feature", "2. Feature", "{7a68b0bd-cee1-4139-b15c-7505884f3ba1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Foundation", "3. Foundation", "{b79ce5de-d3f8-4d4d-aa3a-ebc270bfece4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		always|Any CPU = always|Any CPU
+		always|x64 = always|x64
+		ci|Any CPU = ci|Any CPU
+		ci|x64 = ci|x64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.always|Any CPU.ActiveCfg = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.always|Any CPU.Build.0 = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.always|x64.ActiveCfg = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.always|x64.Build.0 = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.ci|Any CPU.ActiveCfg = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.ci|Any CPU.Build.0 = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.ci|x64.ActiveCfg = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.ci|x64.Build.0 = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.Debug|x64.Build.0 = Debug|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.Release|x64.ActiveCfg = Release|Any CPU
+		{1fa0eabd-c196-471c-b2a0-b89c9b18215f}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

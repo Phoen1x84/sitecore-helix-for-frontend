@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Product filter should have public functions 1`] = `
-Object {
-  "deleteResults": [Function],
-  "filterOptions": [Function],
-  "getResults": [Function],
-}
-`;
