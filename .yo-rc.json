@@ -2,7 +2,7 @@
   "generator-helix": {
     "promptValues": {
       "sourceFolder": "src",
-      "target": "v4.7"
+      "target": "v4.6.2"
     }
   }
 }

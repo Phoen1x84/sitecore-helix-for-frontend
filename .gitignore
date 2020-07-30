@@ -60,6 +60,9 @@ typings/
 # next.js build output
 .next
 
+# visual studio settings
+.vs
+
 # compiled files
 [dD]ist
 [oO]bj
