@@ -1,0 +1,11 @@
+{
+  "name": "residential.website",
+  "version": "1.0.0",
+  "description": "example website using sitecore helix principles",
+  "main": "index.js",
+  "scripts": {
+    "build": "node -e \"console.log('%sscript started at: %s%s', '\\x1b[42;30m', Date(), '\\x1b[0m' )\""
+  },
+  "author": "Matthew Neil",
+  "license": "ISC"
+}
