@@ -62,11 +62,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Project.Residential.Website\Serialization.config" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="dist\*" />
+    <Content Include="package.json" />
+    <Content Include=".gitignore" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <Content Include="src\index.js" />
     <Content Include="web.config" />
+    <Content Include="src\feature\_example.scss" />
+    <Content Include="src\index.scss" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
