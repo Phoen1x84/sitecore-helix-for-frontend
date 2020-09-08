@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "./Project/Commercial.Website",
+    "./Project/Residential.Website",
+    "./Feature/Products"
+  ],
+  "version": "1.0.0"
+}

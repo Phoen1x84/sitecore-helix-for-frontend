@@ -1,5 +1,5 @@
 {
-  "name": "sitecore-helix-for-frontend",
+  "name": "sitecore-fe",
   "version": "1.0.0",
   "description": "example of a front-end application for sitecore helix projects",
   "main": "gulpfile.js",
@@ -9,7 +9,16 @@
     ]
   },
   "scripts": {
-    "test": "jest"
+    "build": "lerna bootstrap --hoist && lerna run build --parallel",
+    "dev": "lerna run dev --parallel | npm run autopublish | npm run serve",
+    "autopublish": "onchange \"dist/**/*.*\" -- npm run publish",
+    "serve": "browser-sync start --files \"C:/inetpub/wwwroot/SitecoreHelixFrontend/dist/\" \"C:/inetpub/wwwroot/SitecoreHelixFrontend/Views/\" --proxy \"https://local.website.org.uk\"",
+    "publish": "npm run deldist && copyfiles -f ./Project/**/dist/**/*.* C:/inetpub/wwwroot/SitecoreHelixFrontend/dist",
+    "lintSCSS": "stylelint Project//**/*.scss --fix",
+    "lintJS": "eslint Feature/**/*.js Project/**/*.js --fix",
+    "lint": "npm run lintSCSS | npm run lintJS",
+    "test": "jest",
+    "deldist": "del-cli --force C:/inetpub/wwwroot/SitecoreHelixFrontend/dist/**/*.*"
   },
   "jest": {
     "verbose": true,
@@ -22,58 +31,6 @@
       "js",
       "json"
     ]
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "IE 10"
-  ],
-  "sasslintConfig": "./sasslint.config.json",
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "rules": {
-      "eqeqeq": "off",
-      "semi": [
-        "error",
-        "always"
-      ],
-      "quotes": [
-        "error",
-        "single",
-        {
-          "avoidEscape": true
-        }
-      ],
-      "one-var": [
-        "error",
-        "never"
-      ],
-      "strict": [
-        "error",
-        "safe"
-      ],
-      "camelcase": "error",
-      "max-depth": [
-        "error",
-        4
-      ]
-    },
-    "globals": {
-      "window": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "allowImportExportEverywhere": true,
-      "ecmaFeatures": {
-        "jsx": true,
-        "modules": true
-      }
-    },
-    "env": {
-      "es6": true,
-      "browser": true
-    }
   },
   "repository": {
     "type": "git",
@@ -89,32 +46,14 @@
     "url": "https://github.com/Phoen1x84/sitecore-helix-for-frontend/issues"
   },
   "homepage": "https://github.com/Phoen1x84/sitecore-helix-for-frontend#readme",
-  "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.1.0",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "^8.0.0",
-    "browserify": "^16.5.1",
-    "del": "^3.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-eslint": "^5.0.0",
-    "gulp-foreach": "^0.1.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-jest": "^4.0.3",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-uglify": "^3.0.2",
-    "jest-cli": "^23.6.0",
-    "node-normalize-scss": "^8.0.1",
-    "node-sass": "^4.10.0",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0",
-    "yargs": "^12.0.5"
+    "browser-sync": "^2.26.10",
+    "copyfiles": "^2.3.0",
+    "del-cli": "^3.0.1",
+    "eslint": "^7.5.0",
+    "jest": "^26.1.0",
+    "lerna": "^3.22.1",
+    "onchange": "^7.0.2",
+    "stylelint": "^13.6.1"
   }
 }

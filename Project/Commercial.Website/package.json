@@ -1,0 +1,36 @@
+{
+  "name": "@sitecore-fe/commercial",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": ">2%",
+  "scripts": {
+    "build": "npm run styles | npm run scripts",
+    "dev": "npm run styles:dev | npm run scripts:dev",
+    "start": "npm run build && npm run dev",
+    "scripts": "rollup -c",
+    "scripts:dev": "onchange \"./src/**/*.js\" \"./Views/**/*.js\" -- npm run scripts",
+    "styles": "node-sass --importer ../../node_modules/node-sass-glob-importer/dist/cli.js -o ./dist/ ./src/commercial.scss",
+    "styles:dev": "onchange \"./src/**/*.scss\" \"./Views/**/*.scss\" -- npm run styles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "node-sass": "^4.14.1",
+    "node-sass-glob-importer": "^5.3.2",
+    "onchange": "^7.0.2",
+    "rollup": "^2.21.0"
+  },
+  "dependencies": {
+    "@sitecore-fe/products": "^1.0.0"
+  }
+}
