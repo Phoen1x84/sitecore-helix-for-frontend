@@ -62,11 +62,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Project.Commercial.Website\Serialization.config" />
+    <Content Include="src\index.js" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="dist\*" />    
+    <Content Include="package.json" />
+    <Content Include=".gitignore" />
+    <Content Include=".env" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <Content Include="web.config" />
+    <Content Include="src\feature\_example.scss" />
+    <Content Include="src\index.scss" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -74,6 +82,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
