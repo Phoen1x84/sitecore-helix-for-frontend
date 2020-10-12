@@ -1,4 +1,4 @@
-# Sitecore Helix For Frontend - A Sitecore User Group Tale
+# Sitecore Helix For Frontend - A Sitecore User Group Tale (WIP)
 
 The repository is an extended example of a possible front-end solution to Sitecore helix projects that [David Moore](https://twitter.com/Moorag81) and I presented in the [Cardiff Sitecore user group](https://www.meetup.com/sug-uk/events/252868135/)
 

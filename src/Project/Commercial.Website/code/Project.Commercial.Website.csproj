@@ -62,12 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Project.Commercial.Website\Serialization.config" />
+    <Content Include="dist\commercial\main.css" />
+    <Content Include="dist\commercial\main.js" />
     <Content Include="src\index.js" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="dist\*" />    
+    <Content Include="dist\*" />
     <Content Include="package.json" />
     <Content Include=".gitignore" />
     <Content Include=".env" />

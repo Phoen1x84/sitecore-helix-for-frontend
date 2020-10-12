@@ -4,7 +4,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const globImporter = require('node-sass-glob-importer');
 
 module.exports = {
-    entry: ['./src/index.js', './src/index.scss'],
+    entry: [
+        './src/index.js',
+        './src/index.scss'
+    ],
     module: {
         rules: [
             {
