@@ -110,7 +110,7 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-uglify": "^3.0.2",
-    "jest-cli": "^23.6.0",
+    "jest-cli": "^29.5.0",
     "node-normalize-scss": "^8.0.1",
     "node-sass": "^4.10.0",
     "vinyl-buffer": "^1.0.1",
